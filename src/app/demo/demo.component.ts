@@ -9,14 +9,21 @@ import { HttpClientService } from '../http-client/http-client.service';
 })
 export class DemoComponent implements OnInit {
 
-  constructor(private httpService: HttpClientService) { }
+  constructor(private httpService?: HttpClientService) { }
+
 
   ngOnInit() {
+
+    //START Http Service Demo
     const url = 'https://2i5vyjsax1.execute-api.us-east-1.amazonaws.com/Prod';
-    const params = {key1: 'aabbba'}
+    const params = {key1: 'abc'}
     this.httpService.post(url, params).subscribe(
       res => console.log(res)
     );
+    //END Http Service Demo
+
+
+
   }
 
 }
