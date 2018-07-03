@@ -15,7 +15,7 @@ export class DemoComponent implements OnInit {
   ngOnInit() {
 
     //START Http Service Demo
-    const url = 'https://2i5vyjsax1.execute-api.us-east-1.amazonaws.com/Prod';
+    const url = 'http://httpbin.org/post';
     const params = {key1: 'abc'}
     this.httpService.post(url, params).subscribe(
       res => console.log(res)
