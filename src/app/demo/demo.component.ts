@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClientService } from '../http-client/http-client.service';
+import { CommonService } from '../common/common.service';
 
 @Component({
   selector: 'app-demo',
@@ -9,7 +10,9 @@ import { HttpClientService } from '../http-client/http-client.service';
 })
 export class DemoComponent implements OnInit {
 
-  constructor(private httpService?: HttpClientService) { }
+  data;
+
+  constructor(private httpService?: HttpClientService, private commonService?: CommonService) { }
 
 
   ngOnInit() {
@@ -22,8 +25,12 @@ export class DemoComponent implements OnInit {
     );
     //END Http Service Demo
 
+    this.commonService.getAsyncData().then(data => this.data = data);
 
+  }
 
+  getSomething() {
+    return this.commonService.getValue1();
   }
 
 }
