@@ -1,11 +1,15 @@
 <div class="app-container" fxLayout="row" fxLayoutAlign="center start">
-  <div fxFlex="30%" fxLayoutAlign="center center">left</div>
-  <div fxLayout="column" fxFlex fxLayoutAlign="center start">
+
+  <div fxFlex="30">left</div>
+
+  <div fxFlex="40">
       <h1>Welcome to Angular Components!</h1>
-      <a href="/demo">Demo</a>
+      <a *ngIf="router.url==='/'" routerLink="/demo">Demo</a>
       <router-outlet></router-outlet>
   </div>
-  <div fxFlex="30%" fxLayoutAlign="center start">Right</div>
+
+  <div fxFlex="30">Right</div>
+
 </div>
 
 

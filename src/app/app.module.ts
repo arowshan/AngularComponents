@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app.routing';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    NgxChartsModule
   ],
   exports: [MatIconModule],
   providers: [],

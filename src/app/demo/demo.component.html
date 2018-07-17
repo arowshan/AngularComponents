@@ -1,7 +1,27 @@
-<a href="/"><mat-icon>keyboard_backspace</mat-icon> </a>
+<a routerLink="/"><mat-icon>keyboard_backspace</mat-icon> </a>
+
+<div fxLayout="row" fxLayoutAlign="center start" class="demo-container">
+    <div fxFlex="100">
+        <h2>Bar Chart</h2>
+        <ngx-charts-bar-vertical
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="single"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            (select)="onSelect($event)">
+        </ngx-charts-bar-vertical>
+    </div>
+    <div fxFlex="100">asdfasdasdfasdfasdfasdfasdfsdf</div>
+</div>
 
 <!-- START Custome Pipe Demo -->
-<h1>{{52 | double}}</h1>
+<!-- <h1>{{52 | double}}</h1> -->
 <!-- END Custome Pipe Demo -->
 
-<h2>John Doe</h2>

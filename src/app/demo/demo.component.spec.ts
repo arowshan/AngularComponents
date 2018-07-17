@@ -53,7 +53,7 @@ describe('DemoComponent', () => {
   });
 
   // Testing DOM element text content
-  it('should see John Doe in h2', () => {
+  xit('should see John Doe in h2', () => {
     let el = fixture.debugElement.query(By.css('h2'));
     expect(el.nativeElement.textContent).toBe('John Doe');
   });
